@@ -17,7 +17,7 @@ const StoreContextProvider = (props)=>{
 
         }
         else{
-            setCartItems((prev=>({...prev,[ItemId]:prev[ItemId]+1})))
+            setCartItems((prev=>({ ...prev,[ItemId]:prev[ItemId]+1})))
         }
         if(token){
             await axios.post(url+"/api/cart/add",{ItemId},{header:{token}})
